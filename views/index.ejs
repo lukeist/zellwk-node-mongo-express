@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>star wars quote</title>
+  </head>
+  <body>
+    <h1>may node express be with you</h1>
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="quote" name="quote" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Quotes</h2>
+    <ul class="quotes">
+      <% for(let i = 0; i < quotes.length; i++) {%>
+      <li class="quote">
+        <span><%= quotes[i].name %></span>
+        <span><%= quotes[i].quote %></span>
+      </li>
+      <% } %>
+    </ul>
+    <section>
+      <h2>Darth Vader invades!</h2>
+      <p>Replace Yodas quote with Vaders</p>
+      <button id="update-button">Replace quote</button>
+      <button id="delete-button">delete vaders quote</button>
+      <p id="message"></p>
+      <script src="/main.js"></script>
+    </section>
+  </body>
+</html>
